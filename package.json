@@ -13,7 +13,7 @@
     "lint": "yarn lint:eslint && yarn lint:misc --check",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
     "start": "webpack-dev-server",
-    "build": "webpack --mode production",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
     "test": "yarn lint",
     "update-changelog": "auto-changelog update",
     "prepublishOnly": "yarn test && yarn build"
